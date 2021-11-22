@@ -1,0 +1,39 @@
+.background{
+    background-color: lightblue;
+
+}
+
+.title{
+    font-size: 70px;
+    font-weight:500px;
+    color: black;
+    text-align: center;
+    text-decoration: underline;
+    
+}
+.largeTitle{
+    font-size: 30px;
+    font-weight: 300px;
+    color: darkgreen;
+    text-align: center;
+    text-decoration: underline;
+    
+}
+.smallTitle{
+    font-size: 20px;
+    text-align: center;
+    color: black;
+    font-weight: 100px;
+    text-decoration: underline;
+}
+.explanation{
+    font-size: medium;
+    color: black;
+}
+
+.column{
+    margin-left: 50%;
+}
+.rightCol{
+    margin-right: 50%;
+}
