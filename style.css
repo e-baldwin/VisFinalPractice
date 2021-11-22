@@ -9,6 +9,7 @@
     color: black;
     text-align: center;
     text-decoration: underline;
+    padding: 10px;
     
 }
 .largeTitle{
@@ -17,6 +18,8 @@
     color: darkgreen;
     text-align: center;
     text-decoration: underline;
+    padding: 20px;
+    position: static;
     
 }
 .smallTitle{
@@ -25,15 +28,24 @@
     color: black;
     font-weight: 100px;
     text-decoration: underline;
+    position: static;
 }
 .explanation{
     font-size: medium;
     color: black;
+    padding: 40px;
+    position: static;
 }
 
 .column{
-    margin-left: 50%;
+    
+    /*float:left;*/
+    margin-right: 50%;
+    /*left:10px;*/
+    position: relative;
 }
 .rightCol{
-    margin-right: 50%;
+    position:relative;
+    /*float:right;*/
+    margin-left:50%;
 }

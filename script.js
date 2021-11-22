@@ -1,5 +1,5 @@
 //Margins
-var margin = {top: 10, right: 10, bottom: 30, left: 100},
+var margin = {top: 10, right: 20, bottom: 30, left: 90},
     width = 600 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
 //Energy Consumption Data 
@@ -15,145 +15,201 @@ var margin = {top: 10, right: 10, bottom: 30, left: 100},
 
 
 //Rising Temperature Data
+var datafilter;
 function getData1(){
-    let i = 1961;
-    const dataArray = [];
-    d3.csv("Environment_Temperature_change_E_All_Data_NOFLAG.csv", d3.autoType)
+    d3.csv("USA_environment_temp_change.csv", d3.autoType)
     .then(data => {
         data.forEach(function(d) {
-            datafiltered = data.filter(function(d){
-                if(d["Area"]==="United States of America"){
+            datafilter = data.filter(function(d){
+                if(d["Element"] === d["Temperature Change"]){
                     return d;
                 }
+                return data;
             })
-            while (i< 2020){
-                //datafiltered.i = +datafiltered.i;
-                dataArray[i] = datafiltered['Y'+i];
-                
-            //console.log(i);
-                i++;
-            }
-                
-            //console.log(data);
-            
         })
-        console.log('datafiltered', datafiltered)
-        
-        console.log('dataArray', dataArray);
-        //console.log(datafiltered.date);
-    })
-    return dataArray;
-   
-    //return data;
-}
-var TemperatureData=[];
-TemperatureData = getData1();
-//console.log('array!',TemperatureData);
-//Temperature Implementation
-var svg = d3.select("#lineGraphTemp")
-  .append("svg")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
-  .append("g")
-    .attr("transform",
-          "translate(" + margin.left + "," + margin.top + ")");
-let i = 1961;
+var temperatureData = data;
+console.log("tempData", temperatureData);
+var svg1 =d3.select("#tempGraph")
+    .append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+        .attr("transform",
+        "translate(" + margin.left + "," + margin.top + ")");
+    
 var xScale1 = d3.scaleTime()
     .domain([1961, 2019])
     .range([ 0, width ]);
-svg.append("g")
-    .attr("transform", "translate(0," + height + ")")
-    .call(d3.axisBottom(xScale1));
+svg1.append("g")
+        .attr("transform", "translate(0," + height + ")")
+        .call(d3.axisBottom(xScale1));
 var yScale1 = d3.scaleLinear()
-    .domain([0, 5])
+    .domain([-5, 5])
     .range([height,0]);
-svg.append("g")
+svg1.append("g")
     //.attr("transform", "translate(0," + height + ")")
     .call(d3.axisLeft(yScale1));
-while (i < 2020){
-svg.append("path")
-    .datum(TemperatureData)
+svg1.append('g')
+    .selectAll("dot")
+    .data(temperatureData)
+    .enter()
+    .append("circle")
+    .attr("cx", function (d) { return xScale1(d.Months); } )
+    .attr("cy", function (d) { return yScale1(d["Temperature Change"]); } )
+    .attr("r", 2);
+var line = d3.line()
+    .x(temperatureData , function(d) { return xScale1(d.Months); })
+    .y(temperatureData, function(d) { return yScale1(d["Temperature Change"]); });
+svg1.append("path")
+    .datum(temperatureData)
+    .enter()
     .attr("fill", "none")
     .attr("stroke", "black")
     .attr("stroke-width", 1.5)
-    //console.log('i', i)
-    //console.log('d.i',TemperatureData[i])
-    .attr("d", d3.line()
-        .x(function(TemperatureData) { return i; })
-        .y(function(TemperatureData) { return yScale1(TemperatureData[i]); })
-        
-        )
-        //console.log('i', i);
-        //console.log('d.i',d[i]);
-      i++;
-}
-      
+    .attr("d", line);
+
+
+})}    
 
 
 
 //Population LineGraph Data for North America
 var datafiltered;
-const PopArray =[];
+
 function getData2(){
-    let i = 1961;
-    d3.csv("world_population_growth.csv", d3.autoType)
+
+    d3.csv("USA_population_growth.csv", d3.autoType)
+    .then(data => {
+        data.forEach(function(d) {
+            //datafiltered = data.filter(function(d){
+              //  if(d["Country Name"]=="North America"){
+                    d.year = +d.year;
+                    d["Population Growth"] = +d["Population Growth"];
+                    //return d;
+                //}
+                return data;
+            })
+                
+            console.log('filteredPopulation',data);
+          //  return data;
+    
+       // })}
+       
+    
+   
+    //return data;
+var populationData = data;
+//populationData = getData2();
+console.log('popdata' , populationData);
+//Population LineGraph Implementation
+var svg2 = d3.select("#lineGraphPop")
+    .append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform",
+          "translate(" + margin.left + "," + margin.top + ")");
+var xScale = d3.scaleTime()
+    .domain([1961, 2019])
+    .range([ 0, width ]);
+svg2.append("g")
+    .attr("transform", "translate(0," + height + ")")
+    .call(d3.axisBottom(xScale));
+var yScale = d3.scaleLinear()
+    //.domain([0, d3.max(PopulationData, function(d){return d["Population Growth"];})])
+    .domain([0, 3])//d3.max(PopulationData, function(d) { return d["Population Growth"];})])
+    .range([height,0]);
+svg2.append("g")
+    //.attr("transform", "translate(0," + height + ")")
+    .call(d3.axisLeft(yScale));
+var line = d3.line()
+    .x(populationData , function(d) { return xScale(d.year); })
+    .y(populationData, function(d) { return yScale(d["Population Growth"]); });
+svg2.append('g')
+    .selectAll("dot")
+    .data(populationData)
+    .enter()
+    .append("circle")
+    .attr("cx", function (d) { return xScale(d.year); } )
+    .attr("cy", function (d) { return yScale(d["Population Growth"]); } )
+    .attr("r", 2);
+svg2.append("path")
+    .datum(populationData)
+    .enter()
+    .attr("fill", "none")
+    .attr("stroke", "black")
+    .attr("stroke-width", 1.5)
+    .attr("d", line);
+})}
+
+
+        
+
+//Greenhouse Gas Data
+function getData3(){
+    d3.csv("co2_emission.csv", d3.autoType)
     .then(data => {
         data.forEach(function(d) {
             datafiltered = data.filter(function(d){
-                if(d["Country Name"]=="North America"){
-                    d[1961] = +d[1961];
-                    d[1962] = +d[1962];
+                if(d["Entity"]==="United States"){
                     return d;
                 }
             })
+            d.Year = +d.Year;
+            d["Annual CO₂ emissions (tonnes )"] = +d["Annual CO₂ emissions (tonnes )"];
                 
             
         })
-        datafiltered.forEach(function(d){
-            
-            PopArray[i] = d[i];
-            i++;
-        })
-       
-        console.log('filtered',datafiltered);
-        console.log('array',PopArray);
-    })
-    return PopArray;
+        console.log('datafilteredGreenhouse', datafiltered);
+        //return datafiltered;
+        
+   // })
    
     //return data;
-}
-var NorthAmericaData = getData2();
-//Population LineGraph Implementation
-var svg = d3.select("#lineGraphPop")
+//}
+
+//Greenhouse Gas Implementation
+//var greenhouseData  = getData3();
+var greenhouseData = datafiltered;
+console.log('greenhouseData', greenhouseData);
+var svg4 = d3.select("#GreenhouseGraph")
   .append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
   .append("g")
     .attr("transform",
           "translate(" + margin.left + "," + margin.top + ")");
-let k = 1961;
-var xScale = d3.scaleTime()
-    .domain([1961, 2019])
-    .range([ 0, width ]);
-svg.append("g")
+var xScale3 = d3.scaleTime()
+    .domain([1961,2019])
+    .range([0,width]);
+
+var yScale3 = d3.scaleLinear()
+    .domain([0, d3.max(greenhouseData, function(d){return d["Annual CO₂ emissions (tonnes )"];})])
+    .range([height, 0]);
+svg4.append("g")
     .attr("transform", "translate(0," + height + ")")
-    .call(d3.axisBottom(xScale));
-var yScale = d3.scaleLinear()
-    .domain([0, 5])//d3.max(NorthAmericaData, function(d) { while (i<2020){i++;return +d.i; }})])
-    .range([height,0]);
-svg.append("g")
+    .call(d3.axisBottom(xScale3));
+svg4.append("g")
     //.attr("transform", "translate(0," + height + ")")
-    .call(d3.axisLeft(yScale));
-svg.append("path")
-    .data(NorthAmericaData)
+    .call(d3.axisLeft(yScale3));
+svg4.append('g')
+    .selectAll("dot")
+    .data(greenhouseData)
+    .enter()
+    .append("circle")
+    .attr("cx", function (d) { return xScale3(d.Year); } )
+    .attr("cy", function (d) { return yScale3(d["Annual CO₂ emissions (tonnes )"]); } )
+    .attr("r", 2);
+svg4.append("path")
+    .datum(greenhouseData)
+    .attr("class", "line")
     .attr("fill", "none")
     .attr("stroke", "black")
     .attr("stroke-width", 1.5)
     .attr("d", d3.line()
-      .x(function(NorthAmericaData) { return xScale(k) })
-      .y(function(NorthAmericaData) { return yScale(d.k) }))
-
-//Greenhouse Gas Data
-
-
-//Greenhouse Gas Implementation
+      .x(greenhouseData, function(d) { return xScale3(d.Year); })
+      .y(greenhouseData, function(d) { return yScale3(d["Annual CO₂ emissions (tonnes )"]); }));
+})}
+getData1();
+getData2();
+getData3();
