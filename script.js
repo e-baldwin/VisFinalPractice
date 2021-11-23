@@ -210,6 +210,14 @@ svg4.append("path")
       .x(greenhouseData, function(d) { return xScale3(d.Year); })
       .y(greenhouseData, function(d) { return yScale3(d["Annual CO₂ emissions (tonnes )"]); }));
 })}
+//Economic Development Data
+
+
+//Economic Development Implementation
+
+
+
+
 getData1();
 getData2();
 getData3();
