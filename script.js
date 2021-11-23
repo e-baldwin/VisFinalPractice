@@ -27,6 +27,7 @@ function getData1(){
                 return data;
             })
         })
+//Rising Temperature Implementation -- Make each year a different color, have months on x-axis
 var temperatureData = data;
 console.log("tempData", temperatureData);
 var svg1 =d3.select("#tempGraph")
@@ -37,11 +38,12 @@ var svg1 =d3.select("#tempGraph")
         .attr("transform",
         "translate(" + margin.left + "," + margin.top + ")");
     
-var xScale1 = d3.scaleTime()
-    .domain([1961, 2019])
+var xScale1 = d3.scaleLinear()
+    .domain([1, 12])
     .range([ 0, width ]);
 svg1.append("g")
         .attr("transform", "translate(0," + height + ")")
+       
         .call(d3.axisBottom(xScale1));
 var yScale1 = d3.scaleLinear()
     .domain([-5, 5])
