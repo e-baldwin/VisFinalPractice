@@ -1,0 +1,12 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {"url": "https://raw.githubusercontent.com/e-baldwin/VisFinalPractice/main/energyconsumptionsectortotal.csv"},
+  "width": 1000,
+  "height": 200,
+  "mark": {"type": "bar", "tooltip": true},
+  "encoding": {
+    "y": {"aggregate": "sum", "field": "Value", "title": "Sum of Total Energy Consumed (BTU)"},
+    "x": {"field": "YYYYMM", "title": "Year"},
+    "color": {"field": "Description"}
+  }
+}
