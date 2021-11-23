@@ -56,7 +56,7 @@ svg1.append('g')
     .append("circle")
     .attr("cx", function (d) { return xScale1(d.Months); } )
     .attr("cy", function (d) { return yScale1(d["Temperature Change"]); } )
-    .attr("r", 2);
+    .attr("r", 3);
 var line = d3.line()
     .x(temperatureData , function(d) { return xScale1(d.Months); })
     .y(temperatureData, function(d) { return yScale1(d["Temperature Change"]); });
@@ -132,7 +132,7 @@ svg2.append('g')
     .append("circle")
     .attr("cx", function (d) { return xScale(d.year); } )
     .attr("cy", function (d) { return yScale(d["Population Growth"]); } )
-    .attr("r", 2);
+    .attr("r", 3);
 svg2.append("path")
     .datum(populationData)
     .enter()
@@ -199,7 +199,7 @@ svg4.append('g')
     .append("circle")
     .attr("cx", function (d) { return xScale3(d.Year); } )
     .attr("cy", function (d) { return yScale3(d["Annual CO₂ emissions (tonnes )"]); } )
-    .attr("r", 2);
+    .attr("r", 3);
 svg4.append("path")
     .datum(greenhouseData)
     .attr("class", "line")
@@ -210,6 +210,67 @@ svg4.append("path")
       .x(greenhouseData, function(d) { return xScale3(d.Year); })
       .y(greenhouseData, function(d) { return yScale3(d["Annual CO₂ emissions (tonnes )"]); }));
 })}
-getData1();
-getData2();
-getData3();
+//Economic Development Data
+var dataFilter;
+function getData4(){
+    d3.csv("MER_TC1.csv", d3.autoType)
+    .then(data => {
+        data.forEach(function(d) {
+            dataFilter = data.filter(function(d){
+                if (d["Description"] === d["U.S. Gross Domestic Product, Real"]){
+                    return d;
+                }
+            })
+            d["YYYYMM"] = +d["YYYYMM"];
+            d["Value"] = +d["Value"];
+            return dataFilter;
+        
+        })
+        console.log("GDPfiltered", data);
+var gdpData = data;
+        console.log('gdpData', gdpData);
+        var svg5 = d3.select("#gdpGraph")
+          .append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+          .append("g")
+            .attr("transform",
+                  "translate(" + margin.left + "," + margin.top + ")");
+        var xScale4 = d3.scaleTime()
+            .domain([1961,2020])
+            .range([0,width]);
+        
+        var yScale4 = d3.scaleLinear()
+            .domain([0, d3.max(gdpData, function(d){return d["Value"];})])
+            .range([height, 0]);
+        svg5.append("g")
+            .attr("transform", "translate(0," + height + ")")
+            .call(d3.axisBottom(xScale4));
+        svg5.append("g")
+            //.attr("transform", "translate(0," + height + ")")
+            .call(d3.axisLeft(yScale4));
+        svg5.append('g')
+            .selectAll("dot")
+            .data(gdpData)
+            .enter()
+            .append("circle")
+            .attr("cx", function (d) { return xScale4(d.YYYYMM); } )
+            .attr("cy", function (d) { return yScale4(d["Value"]); } )
+            .attr("r", 3);
+    
+    
+    })
+
+}
+
+
+//Economic Development Implementation
+
+
+
+
+
+getData1();//Temperatures
+getData2();//Population
+getData3();//Greenhouse
+getData4();//Econ
