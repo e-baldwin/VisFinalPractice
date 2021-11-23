@@ -15,6 +15,16 @@
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/d3/6.1.1/d3.min.js"></script>
     -->
     <script src="script.js" defer type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.18.2"></script>
+
+    <style media="screen">
+        /* Add space between Vega-Embed links  */
+        .vega-actions a {
+            margin-right: 5px;
+        }
+    </style>
 
 </head>
 <body class = "background">
@@ -28,8 +38,72 @@
     <div class = "column">
         <p class = "smallTitle">Rising Temperatures</p>
         <div id= "tempGraph"></div> <!-- Rising Temps , Another for greenhouse Gases-->
-        
+        <!-- Container for the visualization -->
+        <div id="vis"></div>
+
+        <script>
+        // Assign the specification to a local variable vlSpec.
+        var vlSpec = {
+            "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+            "title": "CO2 Emissions By Sector",
+            "data": {
+            "url": "https://raw.githubusercontent.com/e-baldwin/VisFinalPractice/main/co2emissionssectortotal.csv"
+            },
+            "vconcat": [
+            {
+                "width": 400,
+                "height": 200,
+                "mark": {"type": "area", "tooltip": true},
+                "encoding": {
+                "x": {
+                    "field": "YYYYMM",
+                    "title": "Year",
+                    "type": "quantitative",
+                    "scale": {"domain": {"param": "yearRange"}}
+                },
+                "y": {
+                    "aggregate": "sum",
+                    "field": "Value",
+                    "title": "Emissions (BTU)",
+                    "type": "quantitative"
+                },
+                "color": {
+                    "field": "Description",
+                    "type": "nominal",
+                    "scale": {"scheme": "category20b"}
+                }
+                }
+            },
+            {
+                "width": 400,
+                "height": 50,
+                "mark": "area",
+                "params": [
+                {
+                    "name": "yearRange",
+                    "select": {"type": "interval", "encodings": ["x"]}
+                }
+                ],
+                "encoding": {
+                "x": {"field": "YYYYMM", "title": "Year", "type": "quantitative"},
+                "y": {
+                    "aggregate": "sum",
+                    "field": "Value",
+                    "title": "Emissions (BTU)",
+                    "type": "quantitative",
+                    "axis": {"tickCount": 3, "grid": false}
+                }
+                }
+            }
+            ],
+            "config": {}
+        };
+
+        // Embed the visualization in the container with id `vis`
+        vegaEmbed('#vis', vlSpec);
+        </script>
     </div>
+    
     <div class = "rightCol">
         <p class = "smallTitle">Rising Greenhouse Gases</p>
         <div id = "GreenhouseGraph"></div> <!-- Greenhouse Gases rising-->
