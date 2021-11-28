@@ -32,7 +32,7 @@
     <p class = "title">Increasing Energy Consumption</p>
     <p class = "largeTitle">How We Know it's getting Worse and Why</p>
 
-    <h1>By: Emma Baldwin, Wanli Cheng, Audrey Zhu</h1>
+    <p class ="largeTitle">By: Emma Baldwin, Wanli Cheng, Audrey Zhu</p>
 
     <!-- Container for the visualization -->
     <div id="pls"></div>
@@ -85,7 +85,7 @@
                 "x": {
                     "field": "YYYYMM",
                     "title": "Year",
-                    "type": "quantitative",
+                    "type": "nominal",
                     "scale": {"domain": {"param": "yearRange"}}
                 },
                 "y": {
@@ -147,11 +147,91 @@
     <!-- Two COlumns??-->
     <div class = "column">
         <p class = "smallTitle">Population Growth</p>
-        <div id = "lineGraphPop"></div> <!--Have population growth a-->
+        <div id = population></div>
+        <script>
+            var v1Spec={
+                
+            "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+            "title": "US Population Growth",
+            "data": {
+            "url": "https://raw.githubusercontent.com/e-baldwin/VisFinalPractice/main/USA_population_growth.csv"
+            },
+      
+            
+                "width": 600,
+                "height": 200,
+                "mark":{"type": "point", "tooltip": true},
+                "encoding": {
+                "x": {
+                    "field": "year",
+                    "title": "Year",
+                    "type": "nominal"
+                    
+                },
+                "y": {
+                    "aggregate": "sum",
+                    "field": "Population Growth",
+                    "title": "Population Growth",
+                    "type": "quantitative"
+                },
+                "color": {
+                    
+                    "type": "nominal",
+                    "scale": {"scheme": "category20b"}
+                }
+                }
+            }
+            vegaEmbed('#population', v1Spec);
+        </script>
+
+        <!--<div id = "lineGraphPop"></div>  Have population growth a-->
     </div>
     <div class = "rightCol">
         <p class = "smallTitle">Economic Growth</p>
-        <div id  = "gdpGraph" ></div> <!-- economic development potentially?? -->
+        <div id = "economy"></div>
+        <script>
+            var v2Spec={
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+            "title": "US Economy",
+            "data": {
+            "url": "https://raw.githubusercontent.com/e-baldwin/VisFinalPractice/main/MER_TC1.csv"
+            
+            },
+                "transform":[
+                    
+                    {"filter":{"field":"YYYYMM", "gte":"196013"}}
+                ],
+              
+                  
+              
+                "width": 800,
+                "height": 200,
+                
+                "mark":{"type": "point", "tooltip": true},
+                "encoding": {
+                "x": {
+                    "field": "YYYYMM",
+                    "title": "Year",
+                    "type": "nominal"
+                    
+                },
+                "y": {
+                    "aggregate": "sum",
+                    "field": "Value",
+                    "title": "Value",
+                    "type": "quantitative"
+                },
+                "color": {
+                    "field":"Description",
+                    "type": "nominal",
+                    "scale": {"scheme": "category20b"}
+                }
+                
+                }}
+                vegaEmbed('#economy', v2Spec);
+        </script>
+
+        <!-- <div id  = "gdpGraph" ></div> <!-- economic development potentially?? -->
     </div>
     <p class = "explanation">
         As countries continue to increase production, energy will constantly be used.
