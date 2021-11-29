@@ -34,6 +34,7 @@
 
     <p class ="largeTitle">By: Emma Baldwin, Wanli Cheng, Audrey Zhu</p>
 
+    <!------------------------- STACKED BARCHART ------------------------->
     <!-- Container for the visualization -->
     <div id="pls"></div>
     <script>
@@ -55,6 +56,7 @@
     // Embed the visualization in the container with id `vis`
     vegaEmbed('#pls', vlSpec);
     </script>
+    <!------------------------- STACKED BARCHART ------------------------->
 
     <div class = "sankey"></div> <!--Energy Consumption Big Graph -- sankey diagram with clicks leading to more specific graphs-->
     <p class = "explanation">
@@ -67,6 +69,7 @@
         <p class = "smallTitle">Rising Temperatures</p>
         <div id= "tempGraph"></div> <!-- Rising Temps , Another for greenhouse Gases-->
 
+        <!------------------------- AREACHART ------------------------->
         <!-- Container for the visualization -->
         <div id="vis"></div>
         <script>
@@ -130,6 +133,7 @@
         // Embed the visualization in the container with id `vis`
         vegaEmbed('#vis', vlSpec);
         </script>
+        <!------------------------- AREACHART ------------------------->
     </div>
     
     <div class = "rightCol">
@@ -148,9 +152,10 @@
     <!-- Two COlumns??-->
     <div class = "column">
         <p class = "smallTitle">Population Growth</p>
+        <!------------------------- POPULATION GROWTH CHART ------------------------->
         <div id = population></div>
         <script>
-            var v1Spec={
+            var v1Spec = {
                 
             "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
             "title": "US Population Growth",
@@ -184,15 +189,17 @@
             }
             vegaEmbed('#population', v1Spec);
         </script>
+        <!------------------------- POPULATION GROWTH CHART ------------------------->
 
         <!--<div id = "lineGraphPop"></div>  Have population growth a-->
     </div>
     <div class = "rightCol">
         <p class = "smallTitle">Economic Growth</p>
+        <!------------------------- ECONOMIC GROWTH CHART ------------------------->
         <div id = "economy"></div>
         <script>
             var v2Spec={
- "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+            "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
             "title": "US Economy",
             "data": {
             "url": "https://raw.githubusercontent.com/e-baldwin/VisFinalPractice/main/MER_TC1.csv"
@@ -231,6 +238,7 @@
                 }}
                 vegaEmbed('#economy', v2Spec);
         </script>
+        <!------------------------- ECONOMIC GROWTH CHART ------------------------->
 
         <!-- <div id  = "gdpGraph" ></div> <!-- economic development potentially?? -->
     </div>
