@@ -83,15 +83,15 @@
                 "mark": {"type": "area", "tooltip": true},
                 "encoding": {
                 "x": {
-                    "field": "YYYYMM",
+                    "field": "YYYY",
                     "title": "Year",
-                    "type": "nominal",
+                    "type": "temporal",
                     "scale": {"domain": {"param": "yearRange"}}
                 },
                 "y": {
                     "aggregate": "sum",
                     "field": "Value",
-                    "title": "Emissions (BTU)",
+                    "title": "Emissions (MMT)",
                     "type": "quantitative"
                 },
                 "color": {
@@ -112,11 +112,11 @@
                 }
                 ],
                 "encoding": {
-                "x": {"field": "YYYYMM", "title": "Year", "type": "quantitative"},
+                "x": {"field": "YYYY", "title": "Year", "type": "temporal"},
                 "y": {
                     "aggregate": "sum",
                     "field": "Value",
-                    "title": "Emissions (BTU)",
+                    "title": "Emissions (MMT)",
                     "type": "quantitative",
                     "axis": {"tickCount": 3, "grid": false}
                 }

@@ -1,0 +1,55 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "CO2 Emissions By Sector",
+  "data": {
+    "url": "https://raw.githubusercontent.com/e-baldwin/VisFinalPractice/main/co2emissionssectortotal.csv"
+  },
+  "vconcat": [
+    {
+      "width": 400,
+      "height": 200,
+      "mark": {"type": "area", "tooltip": true},
+      "encoding": {
+        "x": {
+          "field": "YYYY",
+          "title": "Year",
+          "type": "temporal",
+          "scale": {"domain": {"param": "yearRange"}}
+        },
+        "y": {
+          "aggregate": "sum",
+          "field": "Value",
+          "title": "Emissions (MMT)",
+          "type": "quantitative"
+        },
+        "color": {
+          "field": "Description",
+          "type": "nominal",
+          "scale": {"scheme": "category20b"}
+        }
+      }
+    },
+    {
+      "width": 400,
+      "height": 50,
+      "mark": "area",
+      "params": [
+        {
+          "name": "yearRange",
+          "select": {"type": "interval", "encodings": ["x"]}
+        }
+      ],
+      "encoding": {
+        "x": {"field": "YYYY", "title": "Year", "type": "temporal"},
+        "y": {
+          "aggregate": "sum",
+          "field": "Value",
+          "title": "Emissions (MMT)",
+          "type": "quantitative",
+          "axis": {"tickCount": 3, "grid": false}
+        }
+      }
+    }
+  ],
+  "config": {}
+}
