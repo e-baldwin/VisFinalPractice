@@ -14,22 +14,25 @@
     font-size: 30px;
     color: rgb(0, 76, 139);
     text-align: center;
-    padding: 10px;
+    padding: 5px;
     position: static;
     
 }
 .smallTitle{
-    font-size: 20px;
+    font-size: 15px;
     text-align: center;
     color: black;
     position: static;
+    padding: 5px;
 }
 
 .explanation{
     font-size: medium;
     color: black;
-    padding: 40px;
-    position: static;
+    padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50em
 }
 
 .column{
