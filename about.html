@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <link rel="stylesheet" href="style.css" />
+
+    <h1 class = "centered">Project Details and Information</h1>
+    <h2>By: Audrey Zhu, Emma Baldwin, Wanli Cheng</h2>
+    <h3>Project Information</h3>
+    <ul>
+        <li>Motivations</li>
+        <ul>
+            <li>
+                We used the IMDB list of the top 1000 movies since it was the cleanest, most interesting dataset.
+                We thought it could be cool to visualize, since this topic is relevant to many people.
+            </li>
+        </ul>
+        <p></p>
+        <li>Design Rationale</li>
+        <ul>
+            <li>
+                Initially, we will have a bar chart displaying the amount of movies in different genres. 
+                Following this chart, there will be point graphs displaying movie ratings within a specific genre as well as a chart displaying gross profits within the same specified genre. 
+                The charts will have interactions and different charts will be displayed depending on which bar in the chart is clicked. 
+            </li>
+        </ul>
+        <p></p>
+        <li>Takeaways</li>
+        <ul>
+            <li>
+                Some of the takeaways that we had were that the majority of movies produced in the last twenty years were classified as dramas, with action and comedy in second and third respectively. 
+                Additionally, another interesting finding was that although drama had the most movies, the highest earning movie did not belong to that genre, but rather to the action genre. 
+                Another finding was that unsurprisingly, movies that were highly rated also yielded greater box office returns in the form of gross profits.
+            </li>
+        </ul>
+    </ul>
+    <h3>
+        Design + Development
+    </h3>
+    <ul>
+        <li>Alternatives Tried</li>
+        <ul>
+            <li>
+                We intially decided that the use of a barchart and two scatterplots would be most appropriate visually and implmentation-wise to convey the data. 
+                Though we ran into many errors with the coding along the way, we believed that this remained the most effective way to visualize the data. 
+            </li>
+            <img src="storyboard.jpg" height="500">
+        </ul>
+        <p></p>
+        <li>Struggles</li>
+        <ul>
+            <li>
+                It was difficult to use the data at first, because of how we wanted to structure our visualizations, so we ended up with a separate csv file that counted up the movies within each genre.
+                It took us awhile to figure out how to implement it smoothly and have the files complement each other. 
+            </li>
+            <li>
+                It was also challenging to coordinate the visualizations with each other. 
+                We ran into many issues getting the scatterplots to load properly with the filtered data from the bar chart. 
+                First, they used the wrong data and would not show up. 
+                Then, the scatterplots would multiply after each click of the bar chart. 
+                After that, they would aggregate on top of each other. 
+                Finally, however, we got it to work so that the new data replaces the old data and updates the graph properly. 
+            </li>
+            <li>
+                Coordinating work between the members was also stressful. 
+                We each worked on our individual visualizations by ourselves, but since we were unable to meet up in person, it was complicated to coordinate the code properly.
+                It was certainly a learning experience for using Git and Github. 
+            </li>
+        </ul>
+        <p></p>
+        <li>Lessons Learned</li>
+        <ul>
+            <li>We learned how to cooperate with each other, as well as how to read and interpret another person’s code.</li>
+            <li>We also learned how to make dynamically updating scatterplots.</li>
+        </ul>
+        <p></p>
+        <li>Workload Distribution</li>
+        <ul>
+            <li>
+                We originally distributed the visualizations among each other; 
+                Wanli - bar chart, Audrey - gross profit by release year scatterplot, Emma - rating by release year scatterplot. 
+                However, as we got into the coding, we found it very difficult to coordinate the visualizations together and had to collaborate more. 
+                We took turns pushing and pulling from the repository and working on each of the steps separately before compiling the successes together. 
+            </li>
+        </ul>
+    </ul>
+
+</html>
