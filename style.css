@@ -1,24 +1,20 @@
 .background{
-    background-color: lightblue;
-
+    background-color: #d3d3d3;
 }
 
 .title{
-    font-size: 70px;
-    font-weight:500px;
+    font-size: 50px;
     color: black;
     text-align: center;
-    text-decoration: underline;
     padding: 10px;
     
 }
+
 .largeTitle{
     font-size: 30px;
-    font-weight: 300px;
-    color: darkgreen;
+    color: rgb(0, 76, 139);
     text-align: center;
-    text-decoration: underline;
-    padding: 20px;
+    padding: 10px;
     position: static;
     
 }
@@ -26,10 +22,9 @@
     font-size: 20px;
     text-align: center;
     color: black;
-    font-weight: 100px;
-    text-decoration: underline;
     position: static;
 }
+
 .explanation{
     font-size: medium;
     color: black;
@@ -38,7 +33,6 @@
 }
 
 .column{
-    
     /*float:left;*/
     margin-right: 50%;
     /*left:10px;*/
@@ -80,4 +74,12 @@
 
 html {
     scroll-behavior: smooth;
+}
+
+#pls {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 115px;
+    padding-right: 40px;
+    background-color: #d3d3d3;
 }

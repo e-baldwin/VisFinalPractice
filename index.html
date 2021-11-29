@@ -3,7 +3,7 @@
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans:400,800">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
     
@@ -26,6 +26,12 @@
         }
     </style>
 
+<style>
+    * {
+      font-family: 'Open Sans';
+    }
+</style>
+
 </head>
 <!-- Website Navigation Toolbar-->
 <div class="topnav">
@@ -38,10 +44,8 @@
 
 <body class = "background">
 
-    <p class = "title">Increasing Energy Consumption</p>
-    <p class = "largeTitle">How We Know it's getting Worse and Why</p>
-
-    <p class ="largeTitle">By: Emma Baldwin, Wanli Cheng, Audrey Zhu</p>
+    <p class = "title">The Impact of Increasing Energy Consumption</p>
+    <p class = "smallTitle">By: Emma Baldwin, Wanli Cheng, and Audrey Zhu</p>
 
     <!------------------------- STACKED BARCHART ------------------------->
     <!-- Container for the visualization -->
@@ -54,6 +58,7 @@
         "data": {"url": "https://raw.githubusercontent.com/e-baldwin/VisFinalPractice/main/energyconsumptionsectortotal.csv"},
         "width": 1000,
         "height": 200,
+        "background": "#d3d3d3",
         "mark": {"type": "bar", "tooltip": true},
         "encoding": {
             "y": {"aggregate": "sum", "field": "Value", "title": "Total Energy Consumed (Trillion BTU)"},
@@ -63,7 +68,7 @@
     };
 
     // Embed the visualization in the container with id `vis`
-    vegaEmbed('#pls', vlSpec);
+    vegaEmbed('#pls', vlSpec, {"actions": false});
     </script>
     <!------------------------- END STACKED BARCHART ------------------------->
 
@@ -136,11 +141,12 @@
                 }
             }
             ],
+            "background": "#d3d3d3",
             "config": {}
         };
 
         // Embed the visualization in the container with id `vis`
-        vegaEmbed('#vis', vlSpec);
+        vegaEmbed('#vis', vlSpec, {"actions": false});
         </script>
         <!------------------------- END AREACHART ------------------------->
     </div>
