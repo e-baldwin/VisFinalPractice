@@ -198,24 +198,24 @@
             "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
             "title": "US Population Growth",
             "data": {
-            "url": "https://raw.githubusercontent.com/e-baldwin/VisFinalPractice/main/USA_population_growth.csv"
+            "url": "https://raw.githubusercontent.com/e-baldwin/VisFinalPractice/main/uspopulationgrowth.csv"
             },
       
             
-                "width": 600,
+                "width": 800,
                 "height": 200,
                 "background": null,
                 "mark":{"type": "point", "tooltip": true},
                 "encoding": {
                 "x": {
-                    "field": "year",
+                    "field": "YYYY",
                     "title": "Year",
                     "type": "nominal"
                     
                 },
                 "y": {
                     "aggregate": "sum",
-                    "field": "Population Growth",
+                    "field": "Value",
                     "title": "Population Growth",
                     "type": "quantitative"
                 },
