@@ -1,0 +1,145 @@
+YYYYMM,YYYY,Value,Column_Order,Description,Unit
+194913,1949,272.5,4,U.S. Nominal GDP,Billion Dollars
+195013,1950,299.8,4,U.S. Nominal GDP,Billion Dollars
+195113,1951,346.9,4,U.S. Nominal GDP,Billion Dollars
+195213,1952,367.3,4,U.S. Nominal GDP,Billion Dollars
+195313,1953,389.2,4,U.S. Nominal GDP,Billion Dollars
+195413,1954,390.5,4,U.S. Nominal GDP,Billion Dollars
+195513,1955,425.5,4,U.S. Nominal GDP,Billion Dollars
+195613,1956,449.4,4,U.S. Nominal GDP,Billion Dollars
+195713,1957,474,4,U.S. Nominal GDP,Billion Dollars
+195813,1958,481.2,4,U.S. Nominal GDP,Billion Dollars
+195913,1959,521.7,4,U.S. Nominal GDP,Billion Dollars
+196013,1960,542.4,4,U.S. Nominal GDP,Billion Dollars
+196113,1961,562.2,4,U.S. Nominal GDP,Billion Dollars
+196213,1962,603.9,4,U.S. Nominal GDP,Billion Dollars
+196313,1963,637.5,4,U.S. Nominal GDP,Billion Dollars
+196413,1964,684.5,4,U.S. Nominal GDP,Billion Dollars
+196513,1965,742.3,4,U.S. Nominal GDP,Billion Dollars
+196613,1966,813.4,4,U.S. Nominal GDP,Billion Dollars
+196713,1967,860,4,U.S. Nominal GDP,Billion Dollars
+196813,1968,940.7,4,U.S. Nominal GDP,Billion Dollars
+196913,1969,1017.6,4,U.S. Nominal GDP,Billion Dollars
+197013,1970,1073.3,4,U.S. Nominal GDP,Billion Dollars
+197113,1971,1164.9,4,U.S. Nominal GDP,Billion Dollars
+197213,1972,1279.1,4,U.S. Nominal GDP,Billion Dollars
+197313,1973,1425.4,4,U.S. Nominal GDP,Billion Dollars
+197413,1974,1545.2,4,U.S. Nominal GDP,Billion Dollars
+197513,1975,1684.9,4,U.S. Nominal GDP,Billion Dollars
+197613,1976,1873.4,4,U.S. Nominal GDP,Billion Dollars
+197713,1977,2081.8,4,U.S. Nominal GDP,Billion Dollars
+197813,1978,2351.6,4,U.S. Nominal GDP,Billion Dollars
+197913,1979,2627.3,4,U.S. Nominal GDP,Billion Dollars
+198013,1980,2857.3,4,U.S. Nominal GDP,Billion Dollars
+198113,1981,3207,4,U.S. Nominal GDP,Billion Dollars
+198213,1982,3343.8,4,U.S. Nominal GDP,Billion Dollars
+198313,1983,3634,4,U.S. Nominal GDP,Billion Dollars
+198413,1984,4037.6,4,U.S. Nominal GDP,Billion Dollars
+198513,1985,4339,4,U.S. Nominal GDP,Billion Dollars
+198613,1986,4579.6,4,U.S. Nominal GDP,Billion Dollars
+198713,1987,4855.2,4,U.S. Nominal GDP,Billion Dollars
+198813,1988,5236.4,4,U.S. Nominal GDP,Billion Dollars
+198913,1989,5641.6,4,U.S. Nominal GDP,Billion Dollars
+199013,1990,5963.1,4,U.S. Nominal GDP,Billion Dollars
+199113,1991,6158.1,4,U.S. Nominal GDP,Billion Dollars
+199213,1992,6520.3,4,U.S. Nominal GDP,Billion Dollars
+199313,1993,6858.6,4,U.S. Nominal GDP,Billion Dollars
+199413,1994,7287.2,4,U.S. Nominal GDP,Billion Dollars
+199513,1995,7639.7,4,U.S. Nominal GDP,Billion Dollars
+199613,1996,8073.1,4,U.S. Nominal GDP,Billion Dollars
+199713,1997,8577.6,4,U.S. Nominal GDP,Billion Dollars
+199813,1998,9062.8,4,U.S. Nominal GDP,Billion Dollars
+199913,1999,9630.7,4,U.S. Nominal GDP,Billion Dollars
+200013,2000,10252.3,4,U.S. Nominal GDP,Billion Dollars
+200113,2001,10581.8,4,U.S. Nominal GDP,Billion Dollars
+200213,2002,10936.4,4,U.S. Nominal GDP,Billion Dollars
+200313,2003,11458.2,4,U.S. Nominal GDP,Billion Dollars
+200413,2004,12213.7,4,U.S. Nominal GDP,Billion Dollars
+200513,2005,13036.6,4,U.S. Nominal GDP,Billion Dollars
+200613,2006,13814.6,4,U.S. Nominal GDP,Billion Dollars
+200713,2007,14451.9,4,U.S. Nominal GDP,Billion Dollars
+200813,2008,14712.8,4,U.S. Nominal GDP,Billion Dollars
+200913,2009,14448.9,4,U.S. Nominal GDP,Billion Dollars
+201013,2010,14992.1,4,U.S. Nominal GDP,Billion Dollars
+201113,2011,15542.6,4,U.S. Nominal GDP,Billion Dollars
+201213,2012,16197,4,U.S. Nominal GDP,Billion Dollars
+201313,2013,16784.9,4,U.S. Nominal GDP,Billion Dollars
+201413,2014,17527.3,4,U.S. Nominal GDP,Billion Dollars
+201513,2015,18238.3,4,U.S. Nominal GDP,Billion Dollars
+201613,2016,18745.1,4,U.S. Nominal GDP,Billion Dollars
+201713,2017,19543,4,U.S. Nominal GDP,Billion Dollars
+201813,2018,20611.9,4,U.S. Nominal GDP,Billion Dollars
+201913,2019,21433.2,4,U.S. Nominal GDP,Billion Dollars
+202013,2020,20932.8,4,U.S. Nominal GDP,Billion Dollars
+1949,1949,2106.6,5,U.S. Real GDP,Billion chained (2012) dollars
+1950,1950,2289.5,5,U.S. Real GDP,Billion chained (2012) dollars
+1951,1951,2473.8,5,U.S. Real GDP,Billion chained (2012) dollars
+1952,1952,2574.9,5,U.S. Real GDP,Billion chained (2012) dollars
+1953,1953,2695.6,5,U.S. Real GDP,Billion chained (2012) dollars
+1954,1954,2680,5,U.S. Real GDP,Billion chained (2012) dollars
+1955,1955,2871.2,5,U.S. Real GDP,Billion chained (2012) dollars
+1956,1956,2932.4,5,U.S. Real GDP,Billion chained (2012) dollars
+1957,1957,2994.1,5,U.S. Real GDP,Billion chained (2012) dollars
+1958,1958,2972,5,U.S. Real GDP,Billion chained (2012) dollars
+1959,1959,3178.2,5,U.S. Real GDP,Billion chained (2012) dollars
+1960,1960,3260,5,U.S. Real GDP,Billion chained (2012) dollars
+1961,1961,3343.5,5,U.S. Real GDP,Billion chained (2012) dollars
+1962,1962,3548.4,5,U.S. Real GDP,Billion chained (2012) dollars
+1963,1963,3702.9,5,U.S. Real GDP,Billion chained (2012) dollars
+1964,1964,3916.3,5,U.S. Real GDP,Billion chained (2012) dollars
+1965,1965,4170.8,5,U.S. Real GDP,Billion chained (2012) dollars
+1966,1966,4445.9,5,U.S. Real GDP,Billion chained (2012) dollars
+1967,1967,4567.8,5,U.S. Real GDP,Billion chained (2012) dollars
+1968,1968,4792.3,5,U.S. Real GDP,Billion chained (2012) dollars
+1969,1969,4942.1,5,U.S. Real GDP,Billion chained (2012) dollars
+1970,1970,4951.3,5,U.S. Real GDP,Billion chained (2012) dollars
+1971,1971,5114.3,5,U.S. Real GDP,Billion chained (2012) dollars
+1972,1972,5383.3,5,U.S. Real GDP,Billion chained (2012) dollars
+1973,1973,5687.2,5,U.S. Real GDP,Billion chained (2012) dollars
+1974,1974,5656.5,5,U.S. Real GDP,Billion chained (2012) dollars
+1975,1975,5644.8,5,U.S. Real GDP,Billion chained (2012) dollars
+1976,1976,5949,5,U.S. Real GDP,Billion chained (2012) dollars
+1977,1977,6224.1,5,U.S. Real GDP,Billion chained (2012) dollars
+1978,1978,6568.6,5,U.S. Real GDP,Billion chained (2012) dollars
+1979,1979,6776.6,5,U.S. Real GDP,Billion chained (2012) dollars
+1980,1980,6759.2,5,U.S. Real GDP,Billion chained (2012) dollars
+1981,1981,6930.7,5,U.S. Real GDP,Billion chained (2012) dollars
+1982,1982,6805.8,5,U.S. Real GDP,Billion chained (2012) dollars
+1983,1983,7117.7,5,U.S. Real GDP,Billion chained (2012) dollars
+1984,1984,7632.8,5,U.S. Real GDP,Billion chained (2012) dollars
+1985,1985,7951.1,5,U.S. Real GDP,Billion chained (2012) dollars
+1986,1986,8226.4,5,U.S. Real GDP,Billion chained (2012) dollars
+1987,1987,8511,5,U.S. Real GDP,Billion chained (2012) dollars
+1988,1988,8866.5,5,U.S. Real GDP,Billion chained (2012) dollars
+1989,1989,9192.1,5,U.S. Real GDP,Billion chained (2012) dollars
+1990,1990,9365.5,5,U.S. Real GDP,Billion chained (2012) dollars
+1991,1991,9355.4,5,U.S. Real GDP,Billion chained (2012) dollars
+1992,1992,9684.9,5,U.S. Real GDP,Billion chained (2012) dollars
+1993,1993,9951.5,5,U.S. Real GDP,Billion chained (2012) dollars
+1994,1994,10352.4,5,U.S. Real GDP,Billion chained (2012) dollars
+1995,1995,10630.3,5,U.S. Real GDP,Billion chained (2012) dollars
+1996,1996,11031.4,5,U.S. Real GDP,Billion chained (2012) dollars
+1997,1997,11521.9,5,U.S. Real GDP,Billion chained (2012) dollars
+1998,1998,12038.3,5,U.S. Real GDP,Billion chained (2012) dollars
+1999,1999,12610.5,5,U.S. Real GDP,Billion chained (2012) dollars
+2000,2000,13131,5,U.S. Real GDP,Billion chained (2012) dollars
+2001,2001,13262.1,5,U.S. Real GDP,Billion chained (2012) dollars
+2002,2002,13493.1,5,U.S. Real GDP,Billion chained (2012) dollars
+2003,2003,13879.1,5,U.S. Real GDP,Billion chained (2012) dollars
+2004,2004,14406.4,5,U.S. Real GDP,Billion chained (2012) dollars
+2005,2005,14912.5,5,U.S. Real GDP,Billion chained (2012) dollars
+2006,2006,15338.3,5,U.S. Real GDP,Billion chained (2012) dollars
+2007,2007,15626,5,U.S. Real GDP,Billion chained (2012) dollars
+2008,2008,15604.7,5,U.S. Real GDP,Billion chained (2012) dollars
+2009,2009,15208.8,5,U.S. Real GDP,Billion chained (2012) dollars
+2010,2010,15598.8,5,U.S. Real GDP,Billion chained (2012) dollars
+2011,2011,15840.7,5,U.S. Real GDP,Billion chained (2012) dollars
+2012,2012,16197,5,U.S. Real GDP,Billion chained (2012) dollars
+2013,2013,16495.4,5,U.S. Real GDP,Billion chained (2012) dollars
+2014,2014,16912,5,U.S. Real GDP,Billion chained (2012) dollars
+2015,2015,17432.2,5,U.S. Real GDP,Billion chained (2012) dollars
+2016,2016,17730.5,5,U.S. Real GDP,Billion chained (2012) dollars
+2017,2017,18144.1,5,U.S. Real GDP,Billion chained (2012) dollars
+2018,2018,18687.8,5,U.S. Real GDP,Billion chained (2012) dollars
+2019,2019,19091.7,5,U.S. Real GDP,Billion chained (2012) dollars
+2020,2020,18422.6,5,U.S. Real GDP,Billion chained (2012) dollars
