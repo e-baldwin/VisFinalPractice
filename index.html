@@ -226,7 +226,7 @@
                 }
                 }
             }
-            vegaEmbed('#population', v1Spec);
+            vegaEmbed('#population', v1Spec, {"actions": false});
         </script>
         <!------------------------- END POPULATION GROWTH CHART ------------------------->
 
@@ -237,28 +237,24 @@
         <!------------------------- ECONOMIC GROWTH CHART ------------------------->
         <div id = "economy"></div>
         <script>
-            var v2Spec={
-            "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-            "title": "US Economic Growth",
-            "data": {
-            "url": "https://raw.githubusercontent.com/e-baldwin/VisFinalPractice/main/MER_TC1.csv"
+            var v2Spec = {
+                "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+                "title": "U.S. Economic Growth",
+                "data": {
+                "url": "https://raw.githubusercontent.com/e-baldwin/VisFinalPractice/main/usgdpgrowth.csv"
             
-            },
+                },
                 "transform":[
-                    
-                    {"filter":{"field":"YYYYMM", "gte":"196013"}}
+                    {"filter":{"field":"YYYY", "gte":"196013"}}
                 ],
-              
-                  
-              
+            
                 "width": 800,
                 "height": 200,
-                "background": null,
-                
-                "mark":{"type": "point", "tooltip": true},
+                "background": "#d3d3d3",
+                "mark":{"type": "line", "point": "true", "tooltip": true},
                 "encoding": {
                 "x": {
-                    "field": "YYYYMM",
+                    "field": "YYYY",
                     "title": "Year",
                     "type": "nominal"
                     
@@ -266,21 +262,20 @@
                 "y": {
                     "aggregate": "sum",
                     "field": "Value",
-                    "title": "Value",
+                    "title": "Dollars (Billions)",
                     "type": "quantitative"
                 },
                 "color": {
                     "field":"Description",
                     "type": "nominal",
-                    "scale": {"scheme": "category20b"}
+                    "scale": {"scheme": "category20b"},
+                    "title": ""
                 }
-                
-                }}
-                vegaEmbed('#economy', v2Spec);
+            }
+            }
+            vegaEmbed('#economy', v2Spec, {"actions": false});
         </script>
         <!------------------------- END ECONOMIC GROWTH CHART ------------------------->
-
-        <!-- <div id  = "gdpGraph" ></div> <!-- economic development potentially?? -->
     </div>
     <p class = "explanation">
         As countries continue to increase production, energy will constantly be used.
