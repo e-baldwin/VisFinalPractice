@@ -35,10 +35,10 @@
 </head>
 <!-- Website Navigation Toolbar-->
 <div class="topnav">
-    <a class="active" href="#home">Home</a>
-    <a href="#pls">Stacked Barchart</a>
-    <a href="#vis">Areachart</a>
-    <a href="#population">Line chart</a>
+    <a class="active" href="#ebackground">Background</a>
+    <a href="#impacts">Impacts</a>
+    <a href="#question">Analysis</a>
+    <a href="#conclusion">Takeaways</a>
     <a href = "about.html">About</a>
 </div>
 
@@ -47,7 +47,7 @@
     <p class = "title">Is Our Future <i>Too</i> Bright?</p>
     <p class = "smallTitle">By: Emma Baldwin, Wanli Cheng, and Audrey Zhu</p>
 
-    <p class = "largeTitle">Background of U.S. Energy Use</p>
+    <p class = "largeTitle" id = "ebackground">Background of U.S. Energy Use</p>
     <p class = "explanation">
         The United States uses and produces a variety of energy sources, which can 
         be categorized into primary and secondary, renewable and nonrenewable, and fossil fuels.
@@ -91,10 +91,10 @@
         smartphone at night, energy is constantly being used throughout our days. However, there are repercussions to this constant 
         energy use, especially on our environment.
     </p>
-    <p class = "largeTitle">How Do We Know it's getting Worse? / Why Should You Care?</p>
+    <p class = "largeTitle" id = "impacts">What Are the Impacts?</p>
     <div class = "column">
-        <p class = "smallTitle">Rising Temperatures</p>
-        <div id= "tempGraph"></div> <!-- Rising Temps , Another for greenhouse Gases-->
+        <!-- <p class = "smallTitle">Rising Temperatures</p>
+        <div id= "tempGraph"></div> Rising Temps , Another for greenhouse Gases -->
 
         <!------------------------- AREACHART ------------------------->
         <!-- Container for the visualization -->
@@ -109,8 +109,8 @@
             },
             "vconcat": [
             {
-                "width": 400,
-                "height": 200,
+                "width": 800,
+                "height": 400,
                 "mark": {"type": "area", "tooltip": true},
                 "encoding": {
                 "x": {
@@ -133,8 +133,8 @@
                 }
             },
             {
-                "width": 400,
-                "height": 50,
+                "width": 800,
+                "height": 100,
                 "mark": "area",
                 "params": [
                 {
@@ -163,20 +163,30 @@
         </script>
         <!------------------------- END AREACHART ------------------------->
     </div>
-    
-    <div class = "rightCol">
-        <p class = "smallTitle">Rising Greenhouse Gases</p>
-        <div id = "GreenhouseGraph"></div> <!-- Greenhouse Gases rising-->
-    </div>
+
     <p class = "explanation">
-        "In the United States, most of the emissions of human-caused (anthropogenic) greenhouse gases (GHG) come primarily from burning 
-        fossil fuels—coal, natural gas, and petroleum—for energy use. Economic growth (with short-term fluctuations in growth rate) and 
-        weather patterns that affect heating and cooling needs are the main factors that drive the amount of energy consumed. 
-        Energy prices and government policies can also affect the sources or types of energy consumed." -eia
+        In the United States, the majority of human-caused greenhouse gas emissions primarily come from the burning of fossil fuels, 
+        natural gas, and petroleum for energy. Some variables that effect greenhouse gas emissions are weather patterns, 
+        which can impact energy usage with regards to heating and cooling, as well as economic growth. Additionally, 
+        energy prices, as well as government legislation may also limit how much energy can be consumed.
+        <br> 
+        <br>As seen in graph (use the view below for a better breakdown) above, the short-term 
+        drop during 2020 in carbon-dioxide emissions for all sectors can be attributed to the COVID-19 
+        pandemic which dramatically impacted economic production.
     </p>
     
+    
+    <div class = "rightCol">
 
-    <p class = "largeTitle">Why is Energy Consumption Increasing? </p>
+
+        <p class = "smallTitle">Rising Greenhouse Gases</p>
+        <div id = "GreenhouseGraph"></div> <!-- Greenhouse Gases rising-->
+        
+    </div>
+    
+    
+
+    <p class = "largeTitle" id = "question">Is Energy Consumption Increasing? </p>
     <!-- Two COlumns??-->
     <div class = "column">
         <p class = "smallTitle">Population Growth</p>
@@ -273,11 +283,15 @@
     <p class = "explanation">
         As countries continue to increase production, energy will constantly be used.
     </p>
+    <p class = "largeTitle">Takeaways</p>
     <p class = "explanation">
-        Energy consumption will continue to increase as we continue to have technological progress. However, with greener forms of energy such
-        as wind, solar, and water, we can minimize the impact that energy consumption has on the environment.
+        In conclusion, 
+        <br> 
+        <br>Energy consumption will continue to increase as we continue to have technological progress. However, with greener 
+        forms of energy such as wind, solar, and water, we can minimize the impact that energy consumption has on the environment.
+        With more efficient systems as well as global legislation and collaborative efforts to reduce these emissions, we can see
+        that there is truly a bright future in store for us and our planet.
     </p>
-
 
 </body>
 
