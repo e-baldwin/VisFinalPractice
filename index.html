@@ -178,18 +178,18 @@
     
     <div class = "rightCol">
 
-
+<!---
         <p class = "smallTitle">Rising Greenhouse Gases</p>
-        <div id = "GreenhouseGraph"></div> <!-- Greenhouse Gases rising-->
-        
+        <div id = "GreenhouseGraph"></div> Greenhouse Gases rising-->
+
     </div>
     
     
 
-    <p class = "largeTitle" id = "question">Is Energy Consumption Increasing? </p>
+    <p class = "largeTitle" id = "question">Why is Energy Consumption Increasing? </p>
     <!-- Two COlumns??-->
-    <div class = "column">
-        <p class = "smallTitle">Population Growth</p>
+    <div class = "center"><!--class = "column">-->
+        <!-- <p class = "smallTitle">Population Growth</p> --> 
         <!------------------------- POPULATION GROWTH CHART ------------------------->
         <div id = population></div>
         <script>
@@ -231,14 +231,14 @@
 
         <!--<div id = "lineGraphPop"></div>  Have population growth a-->
     </div>
-    <div class = "rightCol">
-        <p class = "smallTitle">Economic Growth</p>
+    <div class = "center"><!--</div>class = "rightCol">-->
+       <!--- <p class = "smallTitle">Economic Growth</p> -->
         <!------------------------- ECONOMIC GROWTH CHART ------------------------->
         <div id = "economy"></div>
         <script>
             var v2Spec={
             "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-            "title": "US Economy",
+            "title": "US Economic Growth",
             "data": {
             "url": "https://raw.githubusercontent.com/e-baldwin/VisFinalPractice/main/MER_TC1.csv"
             
