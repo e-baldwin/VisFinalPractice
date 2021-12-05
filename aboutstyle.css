@@ -1,0 +1,55 @@
+.background{
+    background-color: #d3d3d3;
+}
+
+.title{
+    font-size: 50px;
+    color: black;
+    text-align: center;
+    padding: 10px;
+    margin-top: 50px; /* Add a top margin to avoid content overlay */
+
+}
+
+.largeTitle{
+    font-size: 30px;
+    color: rgb(0, 76, 139);
+    text-align: left;
+    padding: 5px;
+    padding-left: 45px;
+    position: static;
+    
+}
+.smallTitle{
+    font-size: 15px;
+    text-align: center;
+    color: black;
+    position: static;
+    padding: 5px;
+}
+
+.explanation{
+    font-size: medium;
+    color: black;
+    padding: 5px;
+    margin-left: 60px;
+    width: 50em
+}
+.center{
+    /*margin-left: 10%;*/
+    text-align: center;
+}
+
+
+.column{
+    /*float:left;*/
+    margin-right: 50%;
+    /*left:10px;*/
+    position: relative;
+}
+
+.rightCol{
+    position:relative;
+    /*float:right;*/
+    margin-left:10%;
+}
