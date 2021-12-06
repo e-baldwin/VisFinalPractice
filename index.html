@@ -211,19 +211,13 @@
         <div id = "tempgraph1"></div>
         <script>
             var newspec = {"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-                "data": {
-	    	    "url": "https://raw.githubusercontent.com/e-baldwin/VisFinalPractice/main/USA_annual_temp.csv"
-	            },
+                "data": {"url": "https://raw.githubusercontent.com/e-baldwin/VisFinalPractice/main/USA_annual_temp.csv"},
 	            "config": { "background": "transparent"}, 
-
     			"width": 680,
 	    		"height": 400,
 		    	"title": "Temperature Change Over the Years",
                 "background": "#d3d3d3",
-    			"mark": {
-	    			"type": "line",
-		    	  "tooltip": true
-			    }, 
+    			"mark": {"type": "line", "tooltip": true}, 
                 "encoding": {
                     "x": {
                         "field": "Year", 
@@ -231,18 +225,37 @@
                         "title": "Year", 
                         "scale": {"domain": [1960,2020]},
                         "axis": {"format":""}
+                    }
+               },
+               "layer": [
+                {
+                    "encoding": { "y": {"field": "Temperature", "type": "quantitative"}
+                },
+                    "layer": [{"mark": "line"},
+                    {"transform": [{"filter": {"param": "hover", "empty": false}}], "mark": "point"}
+                    ]},
+                    {
+      
+                "mark": "rule",
+                "encoding": {
+                    "opacity": {
+                    "condition": {"value": 0.3, "param": "hover", "empty": false},
+                    "value": 0
                     },
-                    "y": {
-                        "field": "Temperature",
-                        "type": "quantitative",
-                        "title": "Temperature Change (Celcius)"
-                   }, 
                     "tooltip": [
-                        {"field": "Year", "type": "nominal", "title": "Year"},
-			    		{"field": "Temperature", "type": "quantitative", "title": "Temperature Change"}
+                        {"field": "Temperature", "type": "quantitative", "title":"Temperature Change (C)"}, 
+                        {"field":"Year", "type":"quantitative", "title":"Year"}
                     ]
-               }
-            };
+                },
+                "params": [{
+                    "name": "hover",
+                    "select": {"type": "point","fields": ["Year"],
+                    "nearest": true, "on": "mouseover",
+                    "clear": "mouseout"
+                    }
+                }]
+                }
+               ]};
 
             vegaEmbed('#tempgraph1', newspec, {"actions": false});
         </script>
@@ -298,7 +311,7 @@
                 "y": {
                     "aggregate": "sum",
                     "field": "Value",
-                    "title": "Population Growth",
+                    "title": "Population Growth (Million)",
                     "type": "quantitative"
                 },
                 "color": {
