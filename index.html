@@ -96,6 +96,10 @@
 
     <div class = "sankey"></div> <!--Energy Consumption Big Graph -- sankey diagram with clicks leading to more specific graphs-->
     <p class = "explanation">
+        The visualization above is a stacked bar chart that displays the energy consumption in the United States. The bar chart is divded into different sectors, Residential, Transportation, and Industrial.
+        Each sector has a distinct color as seen in the legend which can be clicked to highlight a specific sector. 
+        The data is displayed from the years 1949-2020. It is clear in the visualization that energy consumption has been gradually increasing across all three sectors.
+        <br><br>
         In modern America energy consumption is a part of our everyday lives. From driving your car to work, or to charging your 
         smartphone at night, energy is constantly being used throughout our days. However, there are repercussions to this constant 
         energy use, especially on our environment.
@@ -184,14 +188,18 @@
     </div>
 
     <p class = "explanation">
-        In the United States, the majority of human-caused greenhouse gas emissions primarily come from the burning of fossil fuels, 
-        natural gas, and petroleum for energy. Some variables that effect greenhouse gas emissions are weather patterns, 
-        which can impact energy usage with regards to heating and cooling, as well as economic growth. Additionally, 
-        energy prices, as well as government legislation may also limit how much energy can be consumed.
+        The visualizations above display CO2 Emissions. The emissions are divided and displayed individually in an area chart.
+         Each emission has a distinct color that is visible in the legend. The legend colors highlight each distinct emission sector if the color is selected.
+         The visualization spans the years 1974-2020. Throughout the visualization there is a steady rise in emissions. The different rises and dips in CO2 emissions could be due to many aspects.
         <br> 
         <br>As seen in the graph (use the view below for a better breakdown) above, the short-term 
         drop during 2020 in carbon-dioxide emissions for all sectors can be attributed to the COVID-19 
         pandemic which dramatically impacted economic production.
+        <br><br>
+        In the United States, the majority of human-caused greenhouse gas emissions primarily come from the burning of fossil fuels, 
+        natural gas, and petroleum for energy. Some variables that effect greenhouse gas emissions are weather patterns, 
+        which can impact energy usage with regards to heating and cooling, as well as economic growth. Additionally, 
+        energy prices, as well as government legislation may also limit how much energy can be consumed. 
     </p>
     
     
@@ -205,7 +213,7 @@
     
     
 
-    <p class = "largeTitle" id = "question">Is Energy Consumption Increasing? </p>
+    <p class = "largeTitle" id = "question">Why is Energy Consumption Increasing? </p>
     <!-- Two COlumns??-->
     <div class = "center"><!--class = "column">-->
         <!-- <p class = "smallTitle">Population Growth</p> --> 
@@ -225,6 +233,10 @@
                 "height": 200,
                 "background": null,
                 "mark":{"type": "line", "point": "true", "tooltip": true},
+                "params": [{
+                     "name": "paintbrush",
+                    "select": {"type": "point", "on": "mouseover", "nearest": true}
+                }],
                 "encoding": {
                 "x": {
                     "field": "YYYY",
@@ -242,7 +254,12 @@
                     
                     "type": "nominal",
                     "scale": {"scheme": "category20b"}
-                }
+                }/*,
+                /*"size": {
+                    "condition": {"param": "paintbrush", "value": 120},
+                    "value": 30
+                }*/
+                
                 }
             }
             vegaEmbed('#population', v1Spec, {"actions": false});
@@ -299,12 +316,19 @@
     <p class = "explanation">
         Since energy consumption has been increasing throughout the years, we looked at possible correlations. 
         A possible indicator was population, since, as population increases, so would total energy consumption. 
-        However, the population growth rate has been decreasing. 
+        One visualization above displays the population growth rate in the United States. This population growth rate has been steadily increasing.
+         An increase in population means there are more people consuming energy. A rise in energy consumption could be due to the rising population.
+<br><br>
         After this, we examined the trends for economic growth. 
-        As countries continue to increase production, energy will constantly be used. 
-        The production of goods uses energy from various sources. 
-        A way to examine economic production and productivity is through examining Gross Domestic Product and Gross Domestic Output. 
-        This second graph allows us to see that these qualities are increasing for the United States. 
+        We hypothesized that as countries continue to increase production because the production of goods uses energy from various sources.
+
+        A way to examine economic production and productivity is through the examination of Gross Domestic Product. 
+        Gross Domestic Product is the standard measure of the value added created through the production of goods and services in a country, so we believe it is a good measurement for economic growth.
+
+        The second visualization above allows us to see that Real GDP in the United States is increasing. 
+        <br><br>
+        The trend lines for population growth rate and real GDP in the United States correlate to the energy consumption rates in the United States.
+        It is clear that factors such as, population and economic growth contribute to CO2 emissions and energy consumption in the United States.
     </p>
     <p class = "largeTitle" id = "conclusion">Takeaways</p>
     <p class = "explanation">
