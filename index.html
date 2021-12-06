@@ -50,15 +50,14 @@
 
     <p class = "largeTitle" id = "ebackground">Background of U.S. Energy Use</p>
     <p class = "explanation">
-        The United States uses and produces a variety of energy sources, which can 
-        be categorized into primary and secondary, renewable and nonrenewable, and fossil fuels.
-        <br> 
-        <br>Primary energy sources include fossil fuels (petroleum, natural gas, and coal), nuclear energy, and renewable sources of energy. 
-        As such, electricity is a secondary energy source that is produced from primary energy sources.
-        <br> 
-        <br>Energy sources are measured in different physical units, such as liquid fuels in barrels or gallons, natural gas in cubic feet, 
-        coal in short tons, and electricity in kilowatts and kilowatthours. Additionally, British Thermal Units (Btu), are a unit of heat
-        that is a customary unit in the United States used to compare different types of energy.
+        The United States uses and produces a variety of energy sources, which can be categorized into primary and secondary sources, renewable and nonrenewable sources, and fossil fuels. 
+        <br><br>
+        Primary energy sources include fossil fuels (petroleum, natural gas, and coal), nuclear energy, and renewable sources of energy.
+        As such, electricity is a secondary energy source that is produced from primary energy sources. 
+        <br><br>
+        Energy sources are measured in different physical units.
+        Examples include liquid fuels in barrels or gallons, natural gas in cubic feet, coal in short tons, and electricity in kilowatts and kilowatthours.
+        Additionally, British Thermal Units (Btu) are a unit of heat that is a US customary unit used to compare different types of energy. 
     </p>
 
     <!------------------------- STACKED BARCHART ------------------------->
@@ -97,13 +96,17 @@
 
     <div class = "sankey"></div> <!--Energy Consumption Big Graph -- sankey diagram with clicks leading to more specific graphs-->
     <p class = "explanation">
-        The visualization above is a stacked bar chart that displays the energy consumption in the United States. The bar chart is divded into different sectors, Residential, Transportation, and Industrial.
-        Each sector has a distinct color as seen in the legend which can be clicked to highlight a specific sector. 
-        The data is displayed from the years 1949-2020. It is clear in the visualization that energy consumption has been gradually increasing across all three sectors.
+        The visualization above is a stacked bar chart that displays the energy consumption in the United States.
+        The bar chart is divided into different sectors: Residential, Transportation, and Industrial, with the data spanning the years 1949-2020.
+        Each sector has a distinct color, as seen in the legend.
+        The colors in the legend can be clicked to highlight a specific sector. 
         <br><br>
-        In modern America energy consumption is a part of our everyday lives. From driving your car to work, or to charging your 
-        smartphone at night, energy is constantly being used throughout our days. However, there are repercussions to this constant 
-        energy use, especially on our environment.
+        From the visualization, it can be seen that energy consumption has been gradually increasing from across all three sectors, where today’s consumption is more than twice the total energy consumption in 1949.
+        There are moments where our energy consumption decreases, but overall there is a clear increasing trend. 
+        <br><br>
+        In modern America, energy consumption is a part of our everyday lives. 
+        From driving your car to work or to charging your smartphone at night, energy is constantly being used each day. 
+        However, there are repercussions to this constant energy use which can especially be seen in our environment.
     </p>
     <p class = "largeTitle" id = "impacts">What Are the Impacts?</p>
     <div class = "column">
@@ -189,24 +192,23 @@
     </div>
 
     <p class = "explanation">
-        The visualizations above display CO2 Emissions. The emissions are divided and displayed individually in an area chart.
-         Each emission has a distinct color that is visible in the legend. The legend colors highlight each distinct emission sector if the color is selected.
-         The visualization spans the years 1974-2020. Throughout the visualization there is a steady rise in emissions. The different rises and dips in CO2 emissions could be due to many aspects.
-        <br> 
-        <br>As seen in the graph (use the view below for a better breakdown) above, the short-term 
-        drop during 2020 in carbon-dioxide emissions for all sectors can be attributed to the COVID-19 
-        pandemic which dramatically impacted economic production.
+        The visualizations above display CO2 Emissions.
+        The emissions are divided and displayed individually in a stacked area chart, starting at the year of 1974 and ending in 2020.
+        Each type of emission has a distinct color that is visible in the legend.
+        The legend colors highlight each distinct emission sector if the color is selected.
+        Throughout the visualization, there is a steady rise in emissions, with various small rises and dips in CO2 emissions which could be due to many different factors.
+        The data in the graph can be enlarged with the smaller graph view at the bottom of the visualization.
         <br><br>
-        In the United States, the majority of human-caused greenhouse gas emissions primarily come from the burning of fossil fuels, 
-        natural gas, and petroleum for energy. Some variables that effect greenhouse gas emissions are weather patterns, 
-        which can impact energy usage with regards to heating and cooling, as well as economic growth. Additionally, 
-        energy prices, as well as government legislation may also limit how much energy can be consumed. 
+        The most notable change in the graph is that it appears that CO2 emissions have actually decreased in the last decade.
+        It would be natural to assume that CO2 emissions increase alongside energy consumption, but this is likely due to an increase in the use of new green forms of energy.
+        <br><br>
+        There is also a short-term drop in CO2 emissions for all sectors during 2020 which can be attributed to the COVID-19 pandemic since that drastically impacted economic production.
     </p>
     
 
     <!------------------------- TEMPERATURE CHART ------------------------->
     <div class = "center">
-        <div id = "tempgraph"></div>
+        <div id = "tempgraph1"></div>
         <script>
             var newspec = {"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
                 "data": {
@@ -242,14 +244,21 @@
                }
             };
 
-            vegaEmbed('#tempgraph', newspec, {"actions": false});
+            vegaEmbed('#tempgraph1', newspec, {"actions": false});
         </script>
     </div>
 
 
     <!------------------------- END TEMPERATURE CHART ------------------------->
     <p class = "explanation">
-        As you can see, the additional energy consumption has contributed to the increase in temperature change over the last couple of decades. 
+        The visualization above shows the temperature change by year, with line segments connecting all of the dots.
+        As you can see, there are many spikes, but the overall trend is increasing. 
+        Since the temperature change is increasing, this indicates that the temperature itself is increasing by a larger amount each year.
+        This shows a correlation between increased energy consumption and climate change. 
+        <br><br>
+        In the United States, the majority of human-caused greenhouse gas emissions primarily come from the burning of fossil fuels, natural gas, and petroleum for energy.
+        Some variables that affect greenhouse gas emissions are weather patterns, which can impact energy usage with regards to heating and cooling, as well as economic growth.
+        Additionally, energy prices, as well as government legislation may also limit how much energy can be consumed.
     </p>
 
     
@@ -358,19 +367,21 @@
     <p class = "explanation">
         Since energy consumption has been increasing throughout the years, we looked at possible correlations. 
         A possible indicator was population, since, as population increases, so would total energy consumption. 
-        One visualization above displays the population growth rate in the United States. This population growth rate has been steadily increasing.
-         An increase in population means there are more people consuming energy. A rise in energy consumption could be due to the rising population.
-<br><br>
-        After this, we examined the trends for economic growth. 
-        We hypothesized that as countries continue to increase production because the production of goods uses energy from various sources.
-
-        A way to examine economic production and productivity is through the examination of Gross Domestic Product. 
-        Gross Domestic Product is the standard measure of the value added created through the production of goods and services in a country, so we believe it is a good measurement for economic growth.
-
-        The second visualization above allows us to see that Real GDP in the United States is increasing. 
+        One visualization above displays the population growth rate in the United States. 
+        This population growth rate has been steadily increasing.
+         An increase in population means there are more people consuming energy. 
+         A rise in energy consumption could be due to the rising population.
         <br><br>
-        The trend lines for population growth rate and real GDP in the United States correlate to the energy consumption rates in the United States.
-        It is clear that factors such as, population and economic growth contribute to CO2 emissions and energy consumption in the United States.
+        After this, we examined the trends for economic growth. 
+        We hypothesized that there would be a positive relationship between economic growth and energy consumption.
+        This is because the production of goods uses energy from various sources, so as long as countries continue to increase production, energy consumption will increase as well.
+        <br><br>
+        A way to examine economic production and productivity is through the examination of Gross Domestic Product.
+        The Gross Domestic Product is the standard measure of the value created through the production of goods and services in a country, so we believe it is a good measurement for economic growth.
+        The second visualization above allows us to see that the Real GDP in the United States is increasing.
+        <br><br>
+        The trend lines for population growth rate and Real GDP in the United States correlate to the energy consumption rates.
+        It is clear that factors such as population and economic growth contribute to CO2 emissions, the rise of temperatures, and increased energy consumption in the United States. 
     </p>
     <p class = "largeTitle" id = "conclusion">Takeaways</p>
     <p class = "explanation">
@@ -378,9 +389,8 @@
 
         We can see that as population growth and economic growth increase, energy consumption also increases. However, it is understood that those aspects cannot be controlled in order to decrease energy consumption.
         Interestingly, carbon emissions have reduced over the last decade while energy consumption increases. This could be due to new green forms of energy.  
-        <br><br>Something about temperatures?
-        <br> 
-        <br>Energy consumption will continue to increase as we continue to have technological progress. However, with greener 
+        <br><br>
+        Energy consumption will continue to increase as we continue to have technological progress. However, with greener 
         forms of energy such as wind, solar, and water, we can minimize the impact that energy consumption has on the environment.
         With more efficient systems as well as global legislation and collaborative efforts to reduce these emissions, we can see
         that there is truly a bright future in store for us and our planet.
