@@ -203,14 +203,55 @@
         energy prices, as well as government legislation may also limit how much energy can be consumed. 
     </p>
     
-    
-    <div class = "rightCol">
 
-<!---
-        <p class = "smallTitle">Rising Greenhouse Gases</p>
-        <div id = "GreenhouseGraph"></div> Greenhouse Gases rising-->
+    <!------------------------- TEMPERATURE CHART ------------------------->
+    <div class = "center">
+        <div id = "tempgraph"></div>
+        <script>
+            var newspec = {"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+                "data": {
+	    	    "url": "https://raw.githubusercontent.com/e-baldwin/VisFinalPractice/main/USA_annual_temp.csv"
+	            },
+	            "config": { "background": "transparent"}, 
 
+    			"width": 680,
+	    		"height": 400,
+		    	"title": "Temperature Change Over the Years",
+                "background": "#d3d3d3",
+    			"mark": {
+	    			"type": "line",
+		    	  "tooltip": true
+			    }, 
+                "encoding": {
+                    "x": {
+                        "field": "Year", 
+                        "type": "quantitative",
+                        "title": "Year", 
+                        "scale": {"domain": [1960,2020]},
+                        "axis": {"format":""}
+                    },
+                    "y": {
+                        "field": "Temperature",
+                        "type": "quantitative",
+                        "title": "Temperature Change (Celcius)"
+                   }, 
+                    "tooltip": [
+                        {"field": "Year", "type": "nominal", "title": "Year"},
+			    		{"field": "Temperature", "type": "quantitative", "title": "Temperature Change"}
+                    ]
+               }
+            };
+
+            vegaEmbed('#tempgraph', newspec, {"actions": false});
+        </script>
     </div>
+
+
+    <!------------------------- END TEMPERATURE CHART ------------------------->
+    <p class = "explanation">
+        As you can see, the additional energy consumption has contributed to the increase in temperature change over the last couple of decades. 
+    </p>
+
     
     
 
