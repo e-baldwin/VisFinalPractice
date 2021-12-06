@@ -88,6 +88,11 @@
     background-color: rgb(0, 76, 139);
     color: white;
 }
+/*.topnav a:target {
+    background-color: rgb(0, 76, 139);
+    color: white;
+}*/
+
 
 
 html {

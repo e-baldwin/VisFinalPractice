@@ -35,7 +35,7 @@
 </head>
 <!-- Website Navigation Toolbar-->
 <div class="topnav">
-    <a class="active" href="#ebackground">Background</a>
+    <a href="#ebackground">Background</a>
     <a href="#impacts">Impacts</a>
     <a href="#question">Analysis</a>
     <a href="#conclusion">Takeaways</a>
@@ -73,10 +73,19 @@
         "height": 200,
         "background": "#d3d3d3",
         "mark": {"type": "bar", "tooltip": true},
+        "params": [{
+            "name": "Description",
+            "select": {"type": "point", "fields": ["Description"]},
+            "bind": "legend"
+        }],
         "encoding": {
             "y": {"aggregate": "sum", "field": "Value", "title": "Total Energy Consumed (Trillion BTU)"},
             "x": {"field": "YYYY", "title": "Year"},
-            "color": {"field": "Description", "title": ""}
+            "color": {"field": "Description", "title": ""},
+            "opacity": {
+            "condition": {"param": "Description", "value": 1},
+            "value": 0.2
+            }
         }
     };
 
@@ -112,6 +121,10 @@
                 "width": 800,
                 "height": 400,
                 "mark": {"type": "area", "tooltip": true},
+                "params": [{
+                    "name": "Description",
+                    "select": {"type": "point", "fields":["Description"]},"bind": "legend"
+                }],
                 "encoding": {
                 "x": {
                     "field": "YYYY",
@@ -130,6 +143,11 @@
                     "title": " ",
                     "type": "nominal",
                     "scale": {"scheme": "category20b"}
+                },
+                "opacity": {
+                    "condition": {"param": "Description", "value": 1},
+                    "value": 0.2
+                    
                 }
                 }
             },
