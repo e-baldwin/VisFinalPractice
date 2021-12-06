@@ -80,10 +80,10 @@
 }
 
 /* Add a color to the active/current link */
-.topnav a:active {
+/*.topnav a:active {
     background-color: rgb(0, 76, 139);
     color: white;
-}
+}*/
 .topnav a.active {
     background-color: rgb(0, 76, 139);
     color: white;
