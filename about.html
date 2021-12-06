@@ -25,20 +25,23 @@
             <li>Motivations</li>
             <ul>
                 <li>
-                    We did our project on energy consumption in the United States and it's effects on the world today. 
-                    Because energy is a constant requirement of our everyday lives, we thought it would be interesting to 
-                    analyze how it is used on the national scale and see how it impacts our environment as well.
+                    We did our project on energy consumption in the United States and its effects on the world today. 
+                    We often take it for granted, but energy is something we can’t live without.
+                    Because energy is a constant requirement of our everyday lives, we thought it would be interesting to analyze how it is used on the national scale and see how it impacts our environment as well. 
                 </li>
             </ul>
             <p></p>
             <li>Design Rationale</li>
             <ul>
                 <li>
-                    Our first graph shows the total energy consumption over time for the United States. 
-                    It's implemented as a stacked bar chart to show the energy in different sectors.
-                    Our second graph is a stacked area chart which shows the CO2 emissions by sector. 
-                    The last two graphs show the US population growth compared with the economic growth over time. 
-                    It explores those variables as possible causes of the increase in energy consumption. 
+                    Our first graph shows the total energy consumption over time for the United States.
+                    It’s implemented as a stacked bar chart to show the energy in different sectors.
+                    This allows the viewer to see the individual sectors, while also comparing them to the total.
+                    Our second graph is a stacked area chart which shows the CO2 emissions by sector.
+                    This graph has a zoom option to more closely analyze the changes between each year.
+                    The next graph is a line chart that shows the temperature changes over time.
+                    The last two graphs show the US population growth compared with the economic growth over time.
+                    It explores those variables as possible causes of the increase in energy consumption.
                 </li>
             </ul>
             <p></p>
@@ -65,8 +68,19 @@
             <li>Struggles</li>
             <ul>
                 <li>
-                    It was difficult to use the data at first, because of how we wanted to structure our visualizations, so we ended up with multiple csv files that reformat the data.
-                    It took us awhile to figure out how to implement it smoothly and have the files complement each other. 
+                    We had many struggles along the way.
+                    First of all, once we picked a topic, it was difficult finding datasets for our project.
+                    We cycled through multiple datasets that all had something to do with our topic of climate change, but simultaneously had nothing to do with each other. 
+                    Either the parameters were too different (datasets on a national or global scale) or the datasets were not relevant to each other (drinking water or energy consumption).
+                </li>
+                <li>
+                    After we finally decided on energy consumption, that led to our next issue.
+                    The datasets were very difficult to use.
+                    Originally, we tried to create our visualizations with d3, as that gave us more flexibility.
+                    This didn’t work out because the datasets were too difficult to manipulate.
+                    Even using Vega-Lite, we could not get the graphs to show up.
+                    Because of this, we had to manually alter the datasets into a more usable format, but for the temperature change data, that took us multiple tries
+                    This was the biggest challenge, since, luckly, we hadn’t needed to clean the data so thoroughly in our previous assignments. 
                 </li>
                 <li>
                     It was challenging to coordinate the visualizations together to tell a story. As a result of many trials and errors, we 
